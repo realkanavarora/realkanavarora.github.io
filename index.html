@@ -20,6 +20,65 @@
     <link rel="icon" type="image/png" sizes="16x16" href="k.png">
     <link rel="manifest" href="site.webmanifest">
 
+<!-- Inner CSS for popups windows-->
+<style>
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
+
+
+
+</style>
+<!--Inned CSS End-->>
+
+
 </head>
 
 <body id="top">
@@ -40,7 +99,7 @@
             <ul class="header-main-nav">
                 <li class="current"><a class="smoothscroll" href="#intro" title="intro">Intro</a></li>
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll" href="#services" title="services">Reflections</a></li>
+                <li><a class="smoothscroll" href="#services" title="services">CAPABILITIES</a></li>
                 <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
                 <li><a class="smoothscroll" href="#contact" title="contact us">Say Hello</a></li>	
             </ul>
@@ -239,7 +298,7 @@
                 <h2 class="section-heading section-heading--centerbottom">CAPABILITIES</h2>
 
                 <p class="section-desc">
-                    My passion and goal is to help you make your business standout.
+                    My passion and goal is to become best version of myself
                 </p>
             </div>
         </div> <!-- end heading-block -->
@@ -248,13 +307,14 @@
 
             <div class="column item-service" data-aos="fade-up">
                 <div class="item-service__content">
-                    <h4 class="item-title">Get To <br>&nbsp;&nbsp;&nbsp;Know Me</h4>
+                    <h4 class="item-title">Leadership</h4>
                     <p> 
-                        Hello everyone ,so,this was my very first week of my course "Living Conversations".
-                    </p>
-                    <a  class="btn btn--stroke full-width" style="background-color: #333333 !important">Know More</a>
+                        I think my leadership style is very flexible, though, because I would 
+                        say  ...</p>
+                    <a  class="btn btn--stroke full-width" style="background-color: #333333 !important" href="#popup1">View More</a>
                 </div>
             </div>
+    
 
             <div class="column item-service" data-aos="fade-up">
                 <div class="item-service__content">
@@ -279,44 +339,6 @@
                 </div>
             </div>
 
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">Secret of Body Language</h4>
-                    <p>
-                    What is Body Language?
-                    When we talk about body language we look at the subtle cues ....
-                    </p>
-                    <a  class="btn btn--stroke full-width" style="background-color: #333333 !important">Know More</a>
-
-                </div>
-            </div>
-
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">Art of <br>Advertisement</h4>
-
-                    <p>
-                        We see that there is a great competition now in every field of life.
-                        To reach the prospective buyers there is a need of ....
-                    </p>
-                    <a  class="btn btn--stroke full-width" style="background-color: #333333 !important">Know More</a>
-
-                </div>
-            </div>
-
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">Mobile Design</h4>
-                    <p>
-                    Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                    a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                    asperiores est commodi amet quia architecto. Dolores necessitatibus et.
-                    </p>
-                    <a  class="btn btn--stroke full-width" style="background-color: #333333 !important">Know More</a>
-
-                </div>
-            </div>
-
 
 
 
@@ -333,10 +355,9 @@
 
         <div class="row heading-block heading-block--center" data-aos="fade-up">
             <div class="column large-full">
-                <h2 class="section-heading section-heading--centerbottom">Selected Works</h2>
-                <p class="section-desc">
-                    Here are some of my selected works I have done lately. Feel free to 
-                    check them out.
+                <h2 class="section-heading section-heading--centerbottom">The School of Life</h2>
+                <p  style="font-size: 3rem;">
+                    Here are my Process Book and Assignment that I have done during my course journey . 
                 </p>
             </div>
         </div> <!-- end heading-block -->
@@ -349,20 +370,18 @@
                 <div class="masonry__brick" data-aos="fade-up">
                     <div class="item-folio">
                         <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-city-building.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                <img src="images/portfolio/city-building.jpg" 
-                                     srcset="images/portfolio/city-building.jpg 1x, images/portfolio/city-building@2x.jpg 2x" alt="">
+                            <a href="images/portfolio/sol.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                <img src="images/portfolio/sol.jpg" 
+                                      alt="">
                             </a>    
                             <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
                         </div>
     
                         <div class="item-folio__text">
                             <h4 class="item-folio__title">
-                                City Building
+                                Living Conversation
                             </h4>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
+                          
                         </div>
     
                         <div class="item-folio__caption">
